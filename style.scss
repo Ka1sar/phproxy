@@ -1,0 +1,76 @@
+@mixin nomarginpadding {
+ margin:0;
+ padding:0;
+}
+
+$fontsize:12px;
+
+body {
+ @include nomarginpadding;
+ padding-top:5px;
+ font-size:$fontsize;
+ background:#fff;
+ color: #fff;
+}
+
+form, input {
+ @include nomarginpadding;
+}
+
+#container {
+ -webkit-border-radius:20px;
+ border:1px solid #CCCDD7;
+ width:730px;
+ margin:auto;
+ background-color:#9c6;
+}
+
+#menu {
+ border: {
+  left:1px solid #CCCDD7;
+  bottom:1px solid #CCCDD7;
+ }
+ float:right;
+ padding-right:10px;
+}
+
+.title {
+ padding-left:5px;
+ font-size:$fontsize*2;
+ border-bottom:1px solid #fff;
+}
+
+.error {
+ background-color:#F8E6CB;
+ color:#000;
+ margin: {
+  left:40%;
+  right:40%;
+ }
+ text-align:center;
+}
+
+.option {
+ border-bottom:1px solid #fff;
+ background-color:#7FB24C;
+}
+
+.shade {
+ background-color:#E1F3CF;
+}
+
+.head {
+ background-color:#A2AACE;
+}
+
+a {
+ color:#8A3545;
+ &:link,&:visited {
+  text-decoration:none;
+  color:#9B4656;
+ }
+ &:hover,&:active {
+  text-decoration:underline;
+  background-color:transparent;
+ }
+}
